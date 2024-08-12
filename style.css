@@ -1,0 +1,302 @@
+/* General Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+input {
+    border: none;
+    border-radius: 24px;
+    box-shadow: 2px 2px gray;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+/* Container */
+.container {
+    background-image: url('img/hero.jpg');
+    background-size: cover;
+    text-align: center;
+    height: 100%;
+    width: auto;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Box */
+.box {
+    padding: 20px;
+    text-align: center;
+    height: 40vh;
+    min-height: 300px;
+    border-radius: 24px;
+    background: rgba(0, 4, 255, 0.20);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title {
+    margin-top: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+
+/* Buttons */
+.buttons {
+    padding: 10px 20px;
+    background-color: hsl(90, 100%, 50%);
+    font-weight: bold;
+    transition: background-color 0.5s;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: hsl(90, 100%, 40%);
+}
+
+.buttons:active {
+    background-color: hsl(90, 100%, 50%);
+}
+
+/* Specific Box Styles */
+.box1 #countLabel {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    font-size: 40px;
+}
+
+.box2 #myBtn {
+    margin-top: 80px;
+    height: 100px;
+    width: 100px;
+    font-size: larger;
+}
+
+.box3 input,
+.box3 label {
+    display: inline-flex;
+    padding: 10px;
+}
+
+.box4 #diceImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#diceImages img {
+    width: 80px;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.box5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box5 label {
+    display: inline-block;
+    text-align: right;
+}
+
+.box5 input[type="number"] {
+    width: 50px;
+    text-align: start;
+}
+
+.box5 input[type="checkbox"] {
+    display: inline-block;
+    background-color: chartreuse;
+}
+
+.box5 #resultPass {
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    background-color: rgb(150, 204, 79);
+    padding: 16px 50px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    text-align: start;
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-image: url(dice_image/checkbox-blank-circle-line.256x256.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(dice_image/checkbox-circle-line.256x256.png);
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.box__content {
+    position: relative;
+    z-index: 1;
+}
+
+.box__content h1,
+input,
+button,
+ul {
+    padding: 10px;
+}
+
+.box__content h1 {
+    font-size: 50px;
+    color: black;
+    padding: 30px;
+}
+
+.box__content input {
+    border: none;
+    border-radius: 24px;
+    box-shadow: 2px 2px gray;
+}
+
+.box__content ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: disc;
+}
+
+.box__content li {
+    font-size: 20px;
+    margin-left: 50px;
+    word-wrap: break-word;
+}
+
+.box7 #clock {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+.box9 img {
+    max-height: 200px;
+    height: 100%;
+    width: auto;
+}
+
+.card {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    display: none;
+    /* Initially hidden */
+}
+
+.card h1 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .box {
+        height: auto;
+        padding: 15px;
+    }
+
+    .box2 #myBtn {
+        margin-top: 40px;
+        height: 80px;
+        width: 80px;
+        font-size: medium;
+    }
+
+    .box__content h1 {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .box7 #clock {
+        font-size: 2rem;
+    }
+}

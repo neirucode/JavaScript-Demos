@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="grid-container">
+            <!-- number counter -->
+            <div class="box1 box">
+                <h1 class="title">Number Counter</h1>
+                <label id="countLabel">0</label>
+                <button class="buttons" id="decreaseBtn">-</button>
+                <button class="buttons" id="resetBtn">reset</button>
+                <button class="buttons" id="increaseBtn">+</button>
+            </div>
+
+            <!-- random number generator -->
+            <div class="box2 box">
+                <h1 class="title">Random Number</h1>
+                <button class="buttons" id="myBtn">Click me!</button>
+                <label id="myLabel"></label>
+            </div>
+
+            <!-- temperature conversion -->
+            <div class="box3 box">
+                <h1 class="title">Temp. Conversion</h1>
+                <form>
+                    <input type="number" id="textBox" value="0"><br>
+                    <input type="radio" id="toFahrenheit" name="unit">
+                    <label for="toFahrenheit">Celsius &#8680; Fahrenheit</label><br>
+                    <input type="radio" id="toCelsius" name="unit">
+                    <label for="toCelsius">Fahrenheit &#8680; Celsius</label><br>
+                    <button class="buttons" type="button" onclick="convert()">Convert</button>
+                    <p id="result"></p>
+                </form>
+            </div>
+
+            <!-- dice roller -->
+            <div class="box4 box">
+                <h1 class="title">Dice Roller</h1>
+                <label># of dice:</label>
+                <input type="number" id="numOfDice" value="1" min="1" max="8">
+                <button class="buttons" onclick="rollDice()">Roll Dice</button>
+                <div id="diceResult"></div>
+                <div id="diceImages"></div>
+            </div>
+
+            <!-- random password generator -->
+            <div class="box5 box">
+                <h1 class="title">Password Generator</h1>
+                <div class="input-container">
+                    <label for="length">Password Length:</label>
+                    <input type="number" id="length" value="12" min="6" max="12">
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" id="includeLowercase" checked>
+                    <label for="includeLowercase">Include Lowercase</label>
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" id="includeUppercase" checked>
+                    <label for="includeUppercase">Include Uppercase</label>
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" id="includeNumbers" checked>
+                    <label for="includeNumbers">Include Numbers</label>
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" id="includeSymbols" checked>
+                    <label for="includeSymbols">Include Symbols</label>
+                </div>
+                <button class="buttons" onclick="generatedPass()">Generate</button>
+                <div id="resultPass"></div>
+            </div>
+
+
+            <div class="box6 box">
+                <h1 class="title">To-do List</h1>
+                <div class="box__content">
+                    <input type="text" id="taskInput" placeholder="Add your task">
+                    <button class="buttons" id="addTaskBtn">Add</button>
+                </div>
+                <ul id="taskList">
+                </ul>
+            </div>
+
+            <div class="box7 box">
+                <h1 class="title">Digital Clock</h1>
+                <div id="clock-container">
+                    <div id="clock">00:00:00</div>
+                </div>
+            </div>
+
+            <div class="box8 box">
+                <h1 class="title">Stop Watch</h1>
+                <div id="container">
+                    <div id="display">
+                        00:00:00:00
+                    </div><br>
+                    <div id="controls">
+                        <button class="buttons" id="startBtn" onclick="start()">Start</button>
+                        <button class="buttons" id="stopBtn" onclick="stop()">Stop</button>
+                        <button class="buttons" id="resetBtn" onclick="reset()">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box9 box">
+                <h1 class="title">Pokemon Finder</h1>
+                <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+                <button class="buttons" onclick="fetchPokemon()">Search Pokemon</button><br><br>
+                <img src="" id="pokemonSprite" alt="Pokemon Image" style="display: none">
+            </div>
+
+            <div class="box10 box">
+                <h1 class="title">Weather App</h1>
+                <form class="weatherForm">
+                    <input type="text" class="cityInput" placeholder="Enter City">
+                    <button class="buttons" type="submit">Get Weather</button>
+                </form>
+                <div class="card" style="display: none">
+                </div>
+
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+</body>
+
+</html>
